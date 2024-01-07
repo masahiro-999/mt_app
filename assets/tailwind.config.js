@@ -5,7 +5,9 @@ const plugin = require("tailwindcss/plugin")
 const fs = require("fs")
 const path = require("path")
 
-module.exports = {
+const withMT = require("@material-tailwind/html/utils/withMT")
+
+module.exports = withMT({
   content: [
     "./js/**/*.js",
     "../lib/mt_app_web.ex",
@@ -65,4 +67,4 @@ module.exports = {
       }, {values})
     })
   ]
-}
+})
